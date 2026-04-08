@@ -1,0 +1,21 @@
+@use "../variables/colors" as *;
+@use "../variables/fonts-var" as *;
+@use "../mixins" as *;
+
+main {
+    padding: 1.5rem;
+    .sale-title{
+        margin-bottom: 2rem;
+        font-size: $fs-lg;
+        color: var(--text);
+        span {
+            color: var(--main-color);
+        }
+    }
+    @include m-responsive(small-mobile){
+        padding: 1rem;
+    }
+    @include m-responsive(mobile){
+        padding: 0.8rem;
+    }
+}

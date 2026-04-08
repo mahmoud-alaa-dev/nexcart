@@ -1,0 +1,11 @@
+@use '../fonts';
+$main-font: 'Inter', sans-serif;
+$sub-font: 'Nunito', sans-serif;
+
+
+$fs-sm: clamp(0.6rem, 1vmin + 0.3rem, 1.1rem);
+$fs-md: clamp(0.7rem, 0.6vmin + 0.7rem, 1.1rem);
+$fs-lg: clamp(1.1rem, 1vw + 0.9rem, 1.5rem);
+$fs-xl: clamp(1.3rem, 1.5vw + 1rem, 2rem);
+$fs-2xl: clamp(1.6rem, 2vw + 1.2rem, 2.5rem);
+$fs-3xl: clamp(2rem, 3vw + 1.5rem, 4rem);

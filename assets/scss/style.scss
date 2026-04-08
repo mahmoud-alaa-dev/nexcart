@@ -1,0 +1,11 @@
+@use "./global";
+@use "./fonts";
+@use "./variables/fonts-var" as *;
+@use "./variables/colors";
+@use "./components/header";
+@use "./components/main-section";
+@use "./components/main";
+@use "./components/products-section";
+@use "./components/footer";
+
+

@@ -1,0 +1,59 @@
+/// A mixin to generate responsive styles based on a given breakpoint.
+/// @param {String} $breakPoint - The breakpoint to generate styles for.
+/// @content - The styles to be generated.
+
+@mixin m-responsive($breakPoint) {
+    @if $breakPoint == small-mobile {
+        @media (max-width: 361px) {
+            @content;
+        }
+    }
+    @if $breakPoint == mobile {
+        @media (min-width: 362px) and (max-width: 767px) {
+            @content;
+        }
+    } @else if $breakPoint == tablet {
+        @media (min-width: 768px) and (max-width: 991px) {
+            @content;
+        }
+    } @else if $breakPoint == laptop {
+        @media (min-width: 992px) and (max-width: 1199px){
+            @content;
+        }
+    } @else if $breakPoint == desktop {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}
+
+
+@mixin nav-drop-menu(){
+    .nav-links {
+		position: fixed;
+		left: -100%;
+		top: 85px;
+		flex-direction: column;
+		background: rgba(18, 18, 18, 0.98);
+		width: 100%;
+		text-align: center;
+		transition: 0.3s;
+		padding: 40px 0;
+		border-bottom: 1px solid var(--metal-dark);
+		gap: 0;
+	}
+
+	.nav-links li {
+		margin: 15px 0;
+	}
+
+	.nav-links a {
+		display: block;
+		padding: 15px 30px;
+		font-size: 16px;
+	}
+
+	.nav-links.active {
+		left: 0;
+	}
+}

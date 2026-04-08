@@ -1,0 +1,64 @@
+@use "./variables/fonts-var" as *;
+@use "./mixins" as *;
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $main-font; 
+    line-height: 1.6;
+    background: var(--bg-light);  
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;        
+    line-height: 1.2;
+    color: #111;
+}
+
+a {
+    text-decoration: none;         
+    transition: color 0.3s ease;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img, video {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    outline: none;
+    border: none;
+}
+
+.container {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+    @include m-responsive(small-mobile){
+        width: 96%;
+    }
+    @include m-responsive(mobile){
+        width: 96%;
+    }
+}

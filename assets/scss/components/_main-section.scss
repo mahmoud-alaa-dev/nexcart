@@ -1,0 +1,144 @@
+@use "../variables/colors" as *;
+@use "../variables/fonts-var" as *;
+@use "../mixins" as *;
+
+.main-section {
+
+  .slider-section{
+    aspect-ratio: 14/5;
+    width: 100%;
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+    @include m-responsive(small-mobile){
+      aspect-ratio: 13/6;
+    }
+    @include m-responsive(mobile){
+      aspect-ratio: 13/6;
+    }
+    .swiper-container {
+      height: 100%;
+      width: 75%;
+      @include m-responsive(small-mobile){
+        width: 100%;
+      }
+      @include m-responsive(mobile){
+        width: 100%;
+      }
+    .swiper {
+      width: 100%;
+      height: 100%;
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+        .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper-pagination span{
+        background: #fff;
+        opacity: 1;
+        &.swiper-pagination-bullet-active {
+          background: var(--main-color) !important;
+          width: clamp(0.6rem, 2vw, 2rem) !important;
+          height: 7px !important;
+          border-radius: 28px !important;
+          -webkit-border-radius: 28px !important;
+          -moz-border-radius: 28px !important;
+          -ms-border-radius: 28px !important;
+          -o-border-radius: 28px !important;
+  } 
+      }
+    }
+  }
+  .banner_home3{
+      height: 100%;
+      width: 22%;
+      @include m-responsive(small-mobile){
+        display: none;
+      }
+      @include m-responsive(mobile){
+        display: none;
+      }
+      & img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .main-banners{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    @include m-responsive(tablet){
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    };
+    @include m-responsive(laptop){
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    };
+    gap: 15px;
+    padding: 1.5rem 0;
+    .banner-box {
+      position: relative;
+      background-image: url('../../assets/images/bg_banner3.jpg');
+      background-size: cover;
+      background-position: center center;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      a{
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+      }
+      & img {
+        transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        -ms-transition: 0.3s ease;
+        -o-transition: 0.3s ease;
+        @include m-responsive(mobile){
+          width: 60px;
+        }
+        @include m-responsive(tablet){
+          width: 70px;
+        }
+        @include m-responsive(laptop){
+          width: 70px;
+        }
+        }
+      &:hover img{
+        scale: 1.1;
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0.6rem;
+        font-size: $fs-md;
+        .text-box .sale-text{
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          span:last-child{
+            color: var(--main-color);
+            font-size: $fs-lg;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
