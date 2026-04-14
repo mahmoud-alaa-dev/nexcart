@@ -10,7 +10,7 @@
     <script src="../assets/js/main.js" type="module"></script>
     <title>nexCart | online shop</title>
 </head>
-<body data-page="contact">
+<body data-page="checkout">
     <header>
         <nav class="container">
             <div class="logo-container" draggable="false">
@@ -19,7 +19,7 @@
             </div>
                 <ul class="nav-links">
                     <li><a href="../index.html">Home</a></li>
-                    <li class="active"><a href="#">Contact</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./signup.html">Sign Up</a></li> 
                 </ul>
@@ -55,38 +55,48 @@
         </div>
     </header>
     
-    <main class="container contact">
-        <div class="contact-container">
-            <div class="info">
-                <div class="Call-us">
-                    <div class="call-title">
-                        <i class="fa-solid fa-phone"></i>
-                        <h2>Call To Us</h2>
-                    </div>
-                    <p>We are available 24/7</p>
-                    <p>+201014517958</p>
+    <main class="container checkout">
+        <div class="checkout-container">
+            <div class="checkout-left">
+                <h1>Order Summary</h1>
+                <div class="order-summary" id="orderSummary">
+                    <!-- Order items will be dynamically added here -->
                 </div>
-                <div class="write-us">
-                    <div class="write-title">
-                        <i class="fa-regular fa-envelope"></i>
-                        <h2>Write To Us</h2>
+                <div class="order-total">
+                    <div class="total-info">
+                        <h2 class="order-total-title">Total:</h2>
+                        <p class="order-total-price" id="orderTotalPrice">$199.98</p>
                     </div>
-                    <p>Fill out the form and we will get contact you soon</p>
-                    <p>Emails: <span>customer@nexcart.com</span></p>
-                    <p>Emails: <span>support@nexcart.com</span></p>
+                    <a href="./cart.html"><button class="update-cart">Update Cart</button></a>
+                </div>
+                <div class="payments">
+                    <div class="select-payment">
+                        <div class="inp-group">
+                            <input type="radio" name="payment" id="credit">
+                            <label for="credit">Credit Card</label>
+                        </div>
+                        <div class="inp-group">
+                            <input type="radio" name="payment" id="cash" checked>
+                            <label for="cash">Cash On Delivery</label>
+                        </div>
+                    </div>
+                    <img src="../assets/images/payment_method.png" alt="payment_method">
                 </div>
             </div>
-            <div class="form-container">
-                <h1 class="contact-title">Contact Us</h1>
-                <form action="#" class="contact-form" id="contactForm">
-                    <div class="customer-info">
-                        <input type="text" name="name" id="name" placeholder="Your Name" required>
-                        <input type="email" name="email" id="email" placeholder="Your Email" required>
-                        <input type="text" name="phone" id="phone" placeholder="Your Phone" required>
-                    </div>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                    <input type="submit" value="Send Message">
+            <div class="checkout-right">
+                <h1>Checkout</h1>
+                <form class="checkout-form" id="checkoutForm">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text" name="address" id="address" placeholder="Address" required>
+                    <input type="text" name="city" id="city" placeholder="City" required>
+                    <input type="text" name="state" id="state" placeholder="State" required>
+                    <input type="text" name="zip" id="zip" placeholder="Zip Code" required>
+                    <input type="tel" name="phone" id="phone" placeholder="Phone" required>
+                    <input type="submit" value="Place Order" class="place-order">
                 </form>
+                <p class="checkout-msg" id="successMsg"></p>
+                <p class="checkout-msg error" id="errorMsg"></p>
             </div>
         </div>
     </main>

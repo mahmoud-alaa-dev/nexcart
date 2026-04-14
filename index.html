@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js" type="module"></script>
     <title>nexCart | online shop</title>
 </head>
-<body>
+<body data-page="home">
     <header>
         <nav class="container">
             <div class="logo-container" draggable="false">
@@ -22,8 +22,8 @@
                 <ul class="nav-links">
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Sign Up</a></li> 
+                    <li><a href="./pages/about.html">About</a></li>
+                    <li><a href="./pages/signup.html">Sign Up</a></li> 
                 </ul>
 
             <div class="nav-options">
@@ -37,8 +37,10 @@
                         <span class="fav-count">0</span>
                     </div>
                     <div class="cart-icon">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cart-count">0</span>
+                        <a href="./pages/cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-count">0</span>
+                        </a>
                     </div>
                     <i class="fa-solid fa-circle-half-stroke" id="color-theme-icon"></i>
                     <div class="menu-toggle">

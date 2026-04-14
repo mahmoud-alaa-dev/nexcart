@@ -1,0 +1,226 @@
+@use "../mixins" as *;
+@use "../variables/fonts-var" as *;
+@use "../variables/colors" as *;
+
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    gap: 2rem;
+    @include m-responsive(small-mobile){
+        flex-direction: column;
+    }
+    @include m-responsive(mobile){
+        flex-direction: column;
+    }
+    .signup-left {
+        background-image: url('../images/side_picture2.jpg');
+        background-size: cover;
+        background-position: center center;
+        width: 40%;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        @include m-responsive(small-mobile){
+            width: 50%;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            }
+        @include m-responsive(mobile){
+            width: 50%;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            }
+    }
+    .signup-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        @include m-responsive(small-mobile){
+            padding: 0.5rem;
+        }
+        @include m-responsive(mobile){
+            padding: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--main-color);
+            @include m-responsive(small-mobile){
+                font-size: 1.3rem;
+            }
+            @include m-responsive(mobile){
+                font-size: 1.3rem;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            background: var(--bg-dark);
+            padding: 1.2rem 1rem;
+            border-radius: 9px;
+            -webkit-border-radius: 9px;
+            -moz-border-radius: 9px;
+            -ms-border-radius: 9px;
+            -o-border-radius: 9px;
+            .form-group{
+                position: relative;
+                background: #f00;
+                width: 250px;
+                margin-bottom: 50px;
+                span {
+                    display: none;
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(70%);
+                    -webkit-transform: translateY(70%);
+                    -moz-transform: translateY(70%);
+                    -ms-transform: translateY(70%);
+                    -o-transform: translateY(70%);
+                    cursor: pointer;
+                    color: var(--text);
+                    font-size: $fs-sm;
+                }
+            }
+            input:not([type="submit"]),
+            label{
+                position: absolute;
+            }
+            input:not([type="submit"]){
+                left: 0;
+                right: 0;
+                padding: 12px 9px;
+                background: transparent;
+                border: none;
+                outline: none;
+                border-bottom: 2px solid var(--main-color);
+                caret-color: var(--main-color);
+                color: var(--text);
+            }
+
+            input:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 2000px var(--bg-dark) inset !important;
+                -webkit-text-fill-color: var(--text) !important;
+            }
+            input:-moz-autofill {
+                -moz-box-shadow: 0 0 0 2000px var(--bg-dark) inset !important;
+                -moz-text-fill-color: var(--text) !important;
+            }
+
+            label {
+                left: 10px;
+                top: 13px;
+                letter-spacing: 2px;
+                font-size: $fs-md;
+                color: var(--main-color);
+                transition: 277ms;
+                -webkit-transition: 277ms;
+                -moz-transition: 277ms;
+                -ms-transition: 277ms;
+                -o-transition: 277ms;
+            }
+
+            input:focus + label,
+            input:not(:placeholder-shown) + label{
+                left: 7px;
+                top: -6px;
+                font-size: $fs-sm;
+            }
+            input[type="password"]:focus ~ span,
+            input[type="text"]:focus ~ span,
+            input[type="text"]:not(:placeholder-shown) ~ span,
+            input[type="password"]:not(:placeholder-shown) ~ span{
+                display: block;
+            }
+
+            input[type="submit"],
+            .sign-with-google{
+                width: 100%;
+                padding: 0.6rem;
+                background: var(--main-color);
+                border: none;
+                border-radius: 9px;
+                -webkit-border-radius: 9px;
+                -moz-border-radius: 9px;
+                -ms-border-radius: 9px;
+                -o-border-radius: 9px;
+                color: var(--text);
+                cursor: pointer;
+                transition: 277ms;
+                -webkit-transition: 277ms;
+                -moz-transition: 277ms;
+                -ms-transition: 277ms;
+                -o-transition: 277ms;
+                &:hover{
+                    background: var(--main-color-muted);
+                }
+            }
+            .sign-with-google {
+                background: transparent;
+                border: 1px solid var(--main-color);
+                &:hover {
+                    background: var(--main-color);
+                }
+            }
+            .forget-password {
+                color: var(--main-color);
+                text-decoration: none;
+                cursor: pointer;
+                transition: 277ms;
+                -webkit-transition: 277ms;
+                -moz-transition: 277ms;
+                -ms-transition: 277ms;
+                -o-transition: 277ms;
+                &:hover{
+                    text-decoration: underline;
+                }
+                
+            }
+
+            .errors {
+                color: var(--bg-red);
+                max-width: 250px;
+                font-size: $fs-sm;
+            }
+
+            .success {
+                color: var(--bg-green);
+                max-width: 250px;
+                font-size: $fs-sm;
+            }
+        }
+
+        .already-have-account {
+            margin-top: 1rem;
+            text-align: center;
+            p {
+                color: var(--text);
+            }
+            a {
+                color: var(--main-color);
+                text-decoration: none;
+                transition: 277ms;
+                -webkit-transition: 277ms;
+                -moz-transition: 277ms;
+                -ms-transition: 277ms;
+                -o-transition: 277ms;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

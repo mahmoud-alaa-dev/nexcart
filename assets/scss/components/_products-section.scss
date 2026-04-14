@@ -217,6 +217,11 @@
                         background: transparent;
                         border: 1px solid var(--main-color);
                     }
+                    &.added {
+                        color: var(--bg-green);
+                        background: transparent;
+                        border: 1px solid var(--bg-green);
+                    }
                 }
                 .add-fav {
                     color: var(--main-color);

@@ -106,7 +106,7 @@ footer {
                     -moz-transform: translateY(-3px);
                     -ms-transform: translateY(-3px);
                     -o-transform: translateY(-3px);
-}
+                }
             }
         }
 
@@ -143,7 +143,7 @@ footer {
                     font-size: $fs-sm;
                 };
                 @include m-responsive(mobile){
-                    font-size: $fs-sm;
+                    font-size: calc($fs-sm + 0.2rem);
                 };
                 @include m-responsive(tablet){
                     font-size: $fs-md;

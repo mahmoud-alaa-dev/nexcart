@@ -15,6 +15,9 @@
     -moz-border-radius: 9px;
     -ms-border-radius: 9px;
     -o-border-radius: 9px;
+    @include m-responsive(mobile){
+    padding: 0.500rem 0 0.500rem 0.500rem;
+    }
     input{
         padding: 0.625rem 0 0.625rem 0.625rem; 
         background: transparent;
@@ -36,12 +39,6 @@
             -moz-box-shadow: 0 0 0 2000px var(--shade) inset !important;
             -moz-text-fill-color: var(--text) !important;
         }
-        @include m-responsive(small-mobile){
-            padding: 0.450rem 0 0.450rem 0.450rem;
-        }
-        }
-        @include m-responsive(mobile){
-        padding: 0.500rem 0 0.500rem 0.500rem;
         }
 
     i {
@@ -60,6 +57,8 @@
         }
     }
 }
+
+
 
 header {
     position: fixed;
@@ -107,40 +106,13 @@ header {
                 gap: 17px;
             };
             @include m-responsive(small-mobile){
-                position: fixed;
-                left: -100%;
-                top: 85px;
-                flex-direction: column;
-                background: var(--drop-menu);
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                padding: 40px 0;
-                gap: 0;
+                @include drop-menu();
             }
             @include m-responsive(mobile){
-                position: fixed;
-                left: -100%;
-                top: 85px;
-                flex-direction: column;
-                background: var(--drop-menu);
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                padding: 40px 0;
-                gap: 0;
+                @include drop-menu();
             }
             @include m-responsive(tablet){
-                position: fixed;
-                left: -100%;
-                top: 85px;
-                flex-direction: column;
-                background: var(--drop-menu);
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                padding: 40px 0;
-                gap: 0;
+                @include drop-menu();
             }
             @media (orientation: landscape) and (max-height: 380px){
                 padding: 15px 0;
@@ -228,9 +200,7 @@ header {
                     font-size: $fs-md;
                 }
                 }
-                &:hover a{
-                    color: var(--main-color);
-                }
+                &:hover a,
                 &.active a {
                     color: var(--main-color);
                 }

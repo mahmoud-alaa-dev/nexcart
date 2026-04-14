@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover a seamless online shopping experience with our premium e-commerce platform. Explore a wide range of high-quality products, enjoy secure payments, fast delivery, and exclusive deals tailored just for you. Shop smarter, faster, and easier today.">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+    <link rel="shortcut icon" href="../assets/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/main.js" type="module"></script>
+    <title>nexCart | online shop</title>
+</head>
+<body data-page="signup">
+    <header>
+        <nav class="container">
+            <div class="logo-container" draggable="false">
+                <img src="../assets/images/icon.png" alt="logo-icon">
+                <h1 class="nexcart">nex<span class="nexcart-span">Car</span>t</h1>
+            </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li class="active"><a href="#">Sign Up</a></li> 
+                </ul>
+
+            <div class="nav-options">
+                <div class="search-field">
+                    <input type="text" name="nav-search" id="nav-search" placeholder="What are you looking for?" dir="auto">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="cart-icons">
+                    <div class="fav-icon">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="fav-count">0</span>
+                    </div>
+                    <div class="cart-icon">
+                        <a href="./cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-count"></span>
+                        </a>
+                    </div>
+                    <i class="fa-solid fa-circle-half-stroke" id="color-theme-icon"></i>
+                    <div class="menu-toggle">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="nav-bottom container">
+            <div class="search-field">
+                <input type="text" name="nav-search" id="nav-bottom-search" placeholder="What are you looking for?" dir="auto">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container signup">
+        <div class="signup-container">
+            <div class="signup-left">
+                
+            </div>
+            <div class="signup-right">
+                <form action="#" class="signup-form" id="signupForm">
+                    <h2>Create an account</h2>
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="" required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" placeholder="" required>
+                        <label for="password">Password</label>
+                        <span class="toggle-password" id="togglePassword"><i class="fa-regular fa-eye"></i></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="confirm-password" id="confirmPassword" placeholder="" required>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <span class="toggle-password" id="toggleConfirmPassword"><i class="fa-regular fa-eye"></i></span>
+                    </div>
+                    <input type="submit" value="Sign Up">
+                    <button disabled class="sign-with-google"><i class="fa-brands fa-google"></i> Sign Up with Google</button>
+                    <p class="errors" id="signupError"></p>
+                    <p class="success" id="signupSuccess"></p>
+                </form>
+                <div class="already-have-account">
+                    <p>Already have an account? <a href="./login.html">Log In</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-top-box">
+                    <div class="logo-container" draggable="false">
+                        <img src="../assets/images/icon.png" alt="logo-icon">
+                        <h1 class="nexcart">nex<span class="nexcart-span">Car</span>t</h1>
+                    </div>
+                    <p class="footer-paragraph">
+                        Quality products, great price, and a seamless shopping experience.
+                    </p>
+                    <div class="contact-icons">
+                        <a href="#"><i class="fa-solid fa-phone"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-top-box">
+                    <h2>Find it Fast</h2>
+                        <ul>
+                            <li><a href="#">Laptops & Computers</a></li>
+                            <li><a href="#">Smart Phones & Tablets</a></li>
+                            <li><a href="#">TV & Audio</a></li>
+                            <li><a href="#">Appliances</a></li>
+                            <li><a href="#">Jewelry & Watches</a></li>
+                        </ul>
+                </div>
+                <div class="footer-top-box">
+                    <h2>Quick Links</h2>
+                        <ul>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Returns & Exchanges</a></li>
+                            <li><a href="#">Shipping & Delivery</a></li>
+                            <li><a href="#">Estimated Delivery Time</a></li>
+                            <li><a href="#">Purchase History</a></li>
+                        </ul>
+                </div>
+                <div class="footer-top-box">
+                    <h2>Service us</h2>
+                    <ul>
+                        <li><a href="#">Support Center</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <!-- Copyright will be added by JS -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

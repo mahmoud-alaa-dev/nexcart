@@ -13,15 +13,18 @@ html{
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: $main-font; 
     line-height: 1.6;
-    background: var(--bg-light);  
+    background: var(--bg-light);
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;        
     line-height: 1.2;
-    color: #111;
 }
 
 a {

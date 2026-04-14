@@ -4,6 +4,7 @@
 
 main {
     padding: 1.5rem;
+    flex-grow: 1;
     .sale-title{
         margin-bottom: 2rem;
         font-size: $fs-lg;
@@ -17,5 +18,9 @@ main {
     }
     @include m-responsive(mobile){
         padding: 0.8rem;
+    }
+    &.cart {
+        display: flex;
+        flex-direction: column;
     }
 }

@@ -10,8 +10,9 @@
     --main-color: oklch(74.308% 0.17915 54.809);
     --main-color-muted: oklch(58.872% 0.13808 55.892);
     --bg-red: #ed0505;
+    --bg-green: #01ff1a;
     --drop-menu: rgb(230, 230, 230, 0.94);
-    --metal-dark: #3a3a3a;
+    --metal-dark: #dedede;
 }
 
 body.dark {
@@ -24,4 +25,5 @@ body.dark {
     --shadow: #0d0d0da9;
     --border-color: rgba(255, 255, 255, 0.2);
     --drop-menu: rgb(18, 18, 18, 0.98);
+    --metal-dark: #3a3a3a;
 }
